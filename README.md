@@ -11,7 +11,15 @@ Pozdrav! **Advokatska Tarifa Kalkulator** je mobilna Android aplikacija za brzo 
 
 Dizajn Patern za korišćen za izradu aplikacije je bio MVVM uz standardno dodavanje jos jednog sloja (Repository). Takodje, koriscen je i Single Activity princip arhiktekture.
 
+![](screenshots/diagram.png)
+
 ## Screenshots
+
+<img src="screenshots/Screenshot_20191226-045401.png" width="180"> <img src="screenshots/Screenshot_20191226-045425.png" width="180">
+<img src="screenshots/Screenshot_20191226-045525.png" width="180">
+<img src="screenshots/Screenshot_20191226-045536.png" width="180">
+<img src="screenshots/Screenshot_20191228-042152.png" width="180">
+<img src="screenshots/Screenshot_20200101-014155.png" width="180">
 
 
 
