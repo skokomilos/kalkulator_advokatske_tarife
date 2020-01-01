@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation" app:startDestination="@id/traziSlucajFragment">
+    <fragment android:id="@+id/traziSlucajFragment"
+              android:name="com.eklitstudio.advokatkotilin.ui.trazi_slucaj.TraziSlucajFragment"
+              android:label="TRAZI SLUCAJ" tools:layout="@layout/trazi_slucaj_fragment">
+        <action
+                android:id="@+id/action_traziSlucajFragment_to_dodavanjeRadnjeFragment"
+                app:destination="@id/dodavanjeRadnjeFragment" />
+    </fragment>
+    <fragment android:id="@+id/dodajSlucajFragment"
+              android:name="com.eklitstudio.advokatkotilin.ui.odredjivanje_parnice.OdredjivanjeParniceFragment"
+              android:label="ODABERI POSTUPAK" tools:layout="@layout/dodavanje_slucaja_fragment">
+        <action android:id="@+id/action_dodajSlucajFragment_to_dodavanjeSlucajaUBazu"
+                app:destination="@id/dodavanjeSlucajaUBazu"/>
+    </fragment>
+    <fragment android:id="@+id/mojProfilFragment"
+              android:name="com.eklitstudio.advokatkotilin.ui.user_profile.UserProfileFragment"
+              android:label="TVOJ PROFIL" tools:layout="@layout/user_profile_fragment"/>
+    <fragment android:id="@+id/dodavanjeSlucajaUBazu"
+              android:name="com.eklitstudio.advokatkotilin.ui.dodavanje_slucaja_u_bazu.DodavanjeSlucajaUBazuFragment"
+              android:label="DODAJ SLUCAJ U BAZU" tools:layout="@layout/fragment_dodavanje_slucaja_u_bazu">
+        <argument android:name="sifra_slucaja" app:argType="integer"/>
+        <action
+                android:id="@+id/action_dodavanjeSlucajaUBazu_to_dodavanjeRadnjeFragment"
+                app:destination="@id/dodavanjeRadnjeFragment" />
+        <argument
+                android:name="broj_stranaka"
+                app:argType="integer" />
+        <argument
+                android:name="postupak_id"
+                app:argType="long" />
+    </fragment>
+    <fragment
+            android:id="@+id/dodavanjeRadnjeFragment"
+            android:name="com.eklitstudio.advokatkotilin.ui.dodavanje_radnje.DodavanjeRadnjeFragment"
+            android:label="IZABERITE RADNJU"
+            tools:layout="@layout/dodavanje_radnje_fragment" >
+        <argument
+                android:name="idSlucaja"
+                app:argType="string" />
+        <argument
+                android:name="idPostupak"
+                app:argType="long" />
+        <action
+                android:id="@+id/action_dodavanjeRadnjeFragment_to_sveDodateRadnjeIvrednostFragment"
+                app:destination="@id/sveDodateRadnjeIvrednostFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/sveDodateRadnjeIvrednostFragment"
+            android:name="com.eklitstudio.advokatkotilin.ui.lista_dodatih_radnji.SveDodateRadnjeIvrednostFragment"
+            android:label="SPISAK IZVRSENIH RADNJI"
+            tools:layout="@layout/fragment_sve_dodate_radnje">
+        <argument
+                android:name="idSlucaja"
+                app:argType="string" />
+    </fragment>
+</navigation>

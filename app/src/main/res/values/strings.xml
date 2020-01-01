@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Kalkulator Advokatske Tarife</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">Hello</string>
+    <string name="trazi_slucaj_posifri_hint">Trazi slucaj po sifri...</string>
+    <string name="cd_trazi_slucajeve">Trazi slucajeve</string>
+    <string name="uspesno_sacuvana_radnja">Radnja dodata</string>
+    <string name="greska_dodavanje_slucaj">Dodavanje slucaja sa ovom sifrom nije moguce</string>
+    <string name="ukupna_vrednost">Ukupna vrednost:</string>
+    <string name="krivicni_postupak">Krivični postupak</string>
+    <string name="parnicni_postupak">Parnični postupak</string>
+    <string name="prekrsajni_postupak">Prekršajni postupak i postupak privrednih prestupa</string>
+    <string name="izvrsni_postupak">Izvršni postupak</string>
+    <string name="vanparnicni_postupak">Vanparnični postupak</string>
+    <string name="registar_nepokretnosti">Registar nepokretnosti</string>
+    <string name="stecajni_postupak">Stečajni i likvidacioni postupak</string>
+    <string name="upravni_postupak">Upravni postupak</string>
+    <string name="upravni_sporovi">Upravni sporovi</string>
+    <string name="postupak_pred_apr">Postupak pred APR</string>
+    <string name="postupak_pred_poslodavcem">Postupak pred poslodavcem</string>
+    <string name="postupak_pred_ustavnim_sudom">Postupak pred ustavnim sudom</string>
+    <string name="postupak_pored_medjunarodnim_sudom">Postupak pred međunarodnim sudom i arbitražama</string>
+    <string name="medijacija">Medijacija</string>
+    <string name="ostali_postupci">Ostali postupci</string>
+    <string name="no_string">--</string>
+    <string name="ime_i_prezime">Ime i prezime</string>
+    <string name="adresa">Adresa</string>
+    <string name="mesto">Mesto</string>
+    <string name="sifra_slucaja">Sifra slucaja</string>
+    <string name="broj_stranaka">Broj stranaka</string>
+    <string name="slucaj_dodat">Slucaj dodat u bazu</string>
+</resources>

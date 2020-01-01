@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.eklitstudio.advokatkotilin"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"
+                ]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion = '29.0.2'
+    // work-runtime-ktx 2.1.0 and above now requires Java 8
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlin_version"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+
+
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+
+    //Testing
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.version_navigation"
+    implementation "androidx.fragment:fragment-ktx:$rootProject.fragment_version"
+
+
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+
+    //Room
+    //implementation "androidx.room:room-runtime:$rootProject.room_version"
+    kapt "androidx.room:room-compiler:$rootProject.room_version" // For Kotlin use kapt instead of annotationProcessor
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.room:room-runtime:$rootProject.room_version"
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycle_version"
+    // alternatively - just ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_version"
+    // For Kotlin use lifecycle-viewmodel-ktx
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+
+    //Kotlin android coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+
+    implementation "androidx.work:work-runtime-ktx:$rootProject.workVersion"
+
+
+    // Kodein
+    implementation "org.kodein.di:kodein-di-generic-jvm:$rootProject.kodein_version"
+    implementation "org.kodein.di:kodein-di-framework-android-x:$rootProject.kodein_version"
+
+    // New Material Design
+    implementation "com.google.android.material:material:$rootProject.version_material"
+
+    // Groupie RecyclerView
+    implementation "com.xwray:groupie:$rootProject.grupie_recycleivew_version"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$rootProject.grupie_recycleivew_version"
+
+    // Preference
+    implementation "androidx.preference:preference:$rootProject.preference_version"
+
+    // Material dialogs
+    implementation "com.afollestad.material-dialogs:core:$rootProject.material_dialogs"
+    implementation "com.afollestad.material-dialogs:input:$rootProject.material_dialogs"
+
+    // Better dateTime-time support even on older Android versions
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
+
+    implementation "com.jakewharton.timber:timber:$rootProject.timber_version"
+
+    implementation "androidx.vectordrawable:vectordrawable:1.1.0"
+    implementation "androidx.vectordrawable:vectordrawable-animated:1.1.0"
+
+
+
+
+
+}

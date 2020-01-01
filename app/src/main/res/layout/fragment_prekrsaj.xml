@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.dodavanje_slucaja_u_bazu.vrste_parnica_fragmenti.PrekrsajFragment">
+
+    <Spinner
+            android:id="@+id/spinner_prekrsaj_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/light_blue_500"
+            android:paddingRight="10dp"/>
+</RelativeLayout>
+</layout>

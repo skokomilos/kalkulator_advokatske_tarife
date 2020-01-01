@@ -1,0 +1,42 @@
+@file:JvmName("Constants")
+package com.eklitstudio.advokatkotilin.utilities
+
+const val KRIVICNI_POSTUPAK = 2
+const val PARNICNI_POSTUPAK = 3
+const val PREKRSAJNI_POSTUPAK = 4
+const val IZVRSNI_POSTUPAK = 5
+const val VANPARNICNI_POSTUPAK = 6
+const val REGISTAR_NEPOKRETNOSTI = 7
+const val STECAJNI_LIKVIDACIONI_POSTUPAK = 8
+const val UPRAVNI_POSTUPAK = 9
+const val UPRAVNI_SPOROVI = 10
+const val POSTUPAK_APR = 11
+const val POSTUPAK_PRED_POSLODAVCEM = 12
+const val POSTUPAK_PRED_USTAVNIM_SUDOM = 13
+const val POSTUPAK_PRED_MEDJUNARODNIM_SUDOM = 14
+const val MEDIJACIJA = 15
+const val OSTALI_POSTUPCI = 16
+
+
+
+const val NEPROCENLJIVO  = 2L
+const val PROCENLJIVO = 3L
+
+const val OKRIVLJEN = 0
+const val OSTECEN = 1
+
+const val VRSTA_ODBRANE_PRAZNO = 0
+const val VRSTA_ODBRANE_PUNOMOC = 1
+const val VRSTA_ODBRANE_SLUZBENA_DUZNOST = 2
+
+const val CELA_VREDNOST = 1
+const val POLOVINA_VREDNOSTI = 2
+const val DUPLA_VREDNOST = 3
+const val CELA_VREDNOST_PLUS_SATI_MOZE_BITI_OTKAZANO_SA_OPCIJAMA_OTKAZANO_ODRZANO = 4
+const val CELA_VREDNOST_PLUS_SATI = 5
+const val POLA_VREDNOST_PLUS_SATI = 6
+const val VREDNOST_KOJA_SE_UNOSI = 7
+const val VREDNOST_SAMO_SATI = 8
+
+
+const val VREDNOST_JEDNOG_SATA = 50

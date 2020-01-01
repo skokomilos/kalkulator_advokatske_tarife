@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.odredjivanje_parnice.OdredjivanjeParniceFragment">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.eklitstudio.advokatkotilin.viewmodel.DodavanjeSlucajaViewModel"/>
+        <variable
+                name="slucaj"
+                type="com.eklitstudio.advokatkotilin.data.db.entity.Slucaj"/>
+    </data>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sifra_slucaja"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:error="@{viewModel.errorSifraSlucajaFormat}"
+                app:errorEnabled="true">
+
+            <EditText
+                    android:id="@+id/et_dodajslucaj_sifra_slucaja_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="number"
+                    android:afterTextChanged="@{(editable) -> viewModel.setSifraSlucaja(editable)}"
+                    />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/broj_stranaka"
+                app:error="@{viewModel.errorBrojStranakaFormat}"
+                app:errorEnabled="true">
+            <EditText
+                    android:id="@+id/et_dodajslucaj_broj_stranaka_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:afterTextChanged="@{(editable) -> viewModel.setBrojStranaka(editable)}"
+                    />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+                android:id="@+id/spnr_dodajslucaj_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_blue_500"
+                android:paddingRight="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                />
+        <Button
+                android:id="@+id/button_dodaj_slucaj_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:text="dodaj slucaj"/>
+
+    </LinearLayout>
+</layout>

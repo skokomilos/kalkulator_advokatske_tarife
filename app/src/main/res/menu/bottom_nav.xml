@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/traziSlucajFragment"
+            android:icon="@drawable/ic_trazi"
+            android:title="Trazi"/>
+    <item
+            android:id="@+id/dodajSlucajFragment"
+            android:icon="@drawable/ic_dodaj_slucaj"
+            android:title="Dodaj"/>
+    <item
+            android:id="@+id/mojProfilFragment"
+            android:icon="@drawable/ic_moj_profil"
+            android:title="Profil"/>
+</menu>
